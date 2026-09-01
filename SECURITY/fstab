@@ -1,0 +1,44 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Tue Jul 21 09:17:34 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=fccd8278-bd50-484e-a4ad-7b39bb953783 /                       xfs     defaults        0 0
+UUID=5a67fff8-9ee3-46fb-87be-28ddc4639ee8 /boot                   xfs     defaults        0 0
+UUID=92C8-1D4C          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=754b00dc-d163-48a7-b992-2069bbe82c89 /home                   xfs     defaults        0 0
+UUID=e249f8c6-ab68-4d0e-b0ca-78ca260eea07 none                    swap    defaults        0 0
+#
+# (1) Specific configuration 
+#
+# /dev/nvme0n2p1	/testmount	ext4	defaults	0 2
+#
+# (2) Oracle configuration
+#
+# UUID="116eb82d-27b6-476c-bf36-9e4f1b8c7313"	/oracle		xfs		defaults	0 2
+# /dev/nvme0n3p1    /oracle     xfs        defaults    0	0
+#
+# (3) LVM configuration
+#
+# /dev/vg1/lv1	/lv1	ext4	defaults	0	2
+# /dev/vg1/lv2	/lv2	ext4	defaults	0	2
+#
+# RAID Configuration
+#
+# /dev/md0	/raid0	xfs	defaults	0	0
+# /dev/md0	/raid1	xfs	defaults	0	2
+# /dev/md0	/raid5	xfs	defaults	0	2
+#
+# SWAP Configuration
+#
+# /swap/swapfile	none	swap	pri=4	0	0
+# UUID=329169b5-e06a-487d-9259-046beffc51ef	swap	swap	pri=10	0	0
+# /dev/vg1/swap2	none	swap	pri=20	0	0
+#/dev/nvme0n21	/noexiste	xfs	defaults	0	0
+
